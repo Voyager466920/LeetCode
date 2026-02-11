@@ -7,7 +7,7 @@ class Solution(object):
         j = 0
         total = 0
 
-        while i != len(g) and j != len(s):
+        while i < len(g) and j < len(s):
             if g[i] <= s[j]:
                 i += 1
                 j += 1
