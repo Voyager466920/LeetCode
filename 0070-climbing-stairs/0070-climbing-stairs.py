@@ -1,10 +1,15 @@
 class Solution(object):
     def climbStairs(self, n):
-        one, two = 1, 1
+        """
+        :type n: int
+        :rtype: int
+        """
+        one = 1
+        two = 1
 
-        for i in range(n-1):
-            tmp = one
-            one = one + two
-            two = tmp
-        return one
+        for _ in range(n-1):
+            tmp = two
+            two = one + two
+            one = tmp
+        return two
         
